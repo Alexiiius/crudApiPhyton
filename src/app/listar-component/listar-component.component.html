@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Lista de Personas</h1>
+        <div style="height: 290px; overflow-y: auto;">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let persona of personas">
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
+                <td>{{persona.telefono}}</td>
+                <td>{{persona.email}}</td>
+                <td>
+                <td>
+                    <button class="btn btn-danger" (click)="borrarPersona(persona.id)">Borrar</button>
+                    <button class="btn btn-warning" (click)="editarPersona(persona)">Editar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

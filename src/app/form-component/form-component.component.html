@@ -1,0 +1,43 @@
+<!-- Formulario -->
+
+<!-- <form [formGroup]="formularioPersona" (ngSubmit)="crearPersona()">
+    <input type="text" formControlName="nombre" placeholder="Nombre">
+    <input type="text" formControlName="apellido" placeholder="Apellido">
+    <input type="text" formControlName="telefono" placeholder="Teléfono">
+    <input type="text" formControlName="email" placeholder="Email">
+    <button type="submit">Crear persona</button>
+</form> -->
+
+<div class="container" style="width: 600px; height: 300px;" >
+    <form [formGroup]="formularioPersona" (ngSubmit)="crearPersona()" class="mt-4">
+        <div class="form-group row">
+          <label for="nombre" class="col-sm-2 col-form-label mt-2">Nombre:</label>
+          <div class="col-sm-10 mt-2">
+            <input placeholder="Nombre" type="text" id="nombre" formControlName="nombre" class="form-control">
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label for="precio" class="col-sm-2 col-form-label">Apellido:</label>
+          <div class="col-sm-10">
+            <input placeholder="Apellido" type="text" id="apellido" formControlName="apellido" class="form-control">
+          </div>
+        </div>
+      
+        <div class="form-group row">
+          <label for="ingredientes" class="col-sm-2 col-form-label">Telefono:</label>
+          <div class="col-sm-10">
+            <input placeholder="Telefono" type="text" id="telefono" formControlName="telefono" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="ingredientes" class="col-sm-2 col-form-label">Email:</label>
+            <div class="col-sm-10">
+              <input placeholder="Email" type="text" id="email" formControlName="email" class="form-control">
+            </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Crear Persona</button>
+    </form>
+</div>
